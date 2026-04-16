@@ -7,6 +7,7 @@
 **Course:** Computer Networks (UE24CS252B)
 **Institution:** PES University
 **Date:** April 2026
+**GitHub Repository:** [DEV-2828/SDN-Firewall-Mininet](https://github.com/DEV-2828/SDN-Firewall-Mininet)
 
 ---
 
@@ -213,6 +214,8 @@ sudo python3 topo.py
 
 ![Mininet pingall Output](./screenshots/Screenshot%20from%202026-04-16%2013-51-14.png)
 
+*Figure 1: Mininet CLI showing the network startup sequence (hosts h1–h4 and switch s1 being configured) followed by the `pingall` command result. 4 out of 12 pings were received (66% dropped), with `h1↔h3` blocked by the MAC rule and all traffic to/from `h4` blocked by the IP rule.*
+
 ---
 
 ## 10. Firewall Implementation
@@ -297,6 +300,8 @@ def log_blocked_packet(self, src, dst, reason):
 **Screenshot — Ryu Controller Live Output (Showing Blocked Packets):**
 
 ![Ryu Controller Firewall Logs](./screenshots/Screenshot%20from%202026-04-16%2013-51-09.png)
+
+*Figure 2: Ryu Controller terminal output (`ryu-manager firewall.py`) showing real-time firewall log entries. Each `!! FIREWALL:` line corresponds to a packet that was intercepted, matched a block rule, and dropped. MAC Rule matches (h1→h3) and IP Rule matches (traffic to/from 10.0.0.4) are both visible.*
 
 ---
 
