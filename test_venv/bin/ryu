@@ -1,0 +1,10 @@
+#!/home/dev/Desktop/SDN_Mininet/test_venv/bin/python3.9
+# PBR Generated from 'console_scripts'
+
+import sys
+
+from ryu.cmd.ryu_base import main
+
+
+if __name__ == "__main__":
+    sys.exit(main())

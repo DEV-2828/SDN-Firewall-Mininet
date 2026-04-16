@@ -1,0 +1,5 @@
+PES2UG24CS152	DEVOPAM PAL	SDN-Based Firewall
+
+SDN-Based Firewall :	Develop a controller-based firewall to block or allow traffic between hosts.	
+Rule-based filtering (IP/MAC/port);  Install drop rules;  Test allowed vs blocked traffic;  Maintain logs of blocked packets	
+
